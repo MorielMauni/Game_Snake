@@ -38,6 +38,15 @@ class Snake():
         '''
         self.add_segment(self.segments[-1].position())
 
+    def snake_reset(self):
+        """
+        Clear the screen from lost games and creates a new game
+        """
+        for seg in self.segments:
+            seg.goto(1000,1000)
+        self.segments.clear()
+        self.create_snake()
+        self.head = self.segments[0]
 
     def move(self):
         """Snake Movement: make all the parts of the snake to always moves forward"""

@@ -1,5 +1,4 @@
 # Imports
-from logging import fatal
 from turtle import Turtle, Screen
 from snake import Snake
 from food import Food
@@ -42,14 +41,15 @@ while game_is_on:
         score.increase_score()
     # Collision with wall
     if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
-        game_is_on = False
-        score.game_over()
+        score.reset_score()
+        snake.snake_reset()
 
     # Collision with tail
     for segment in snake.segments[1:]:
         # Exclude the head of the snake
         if snake.head.distance(segment) < 10:
-            game_is_on = False
-            score.game_over()
+            score.reset_score()
+            snake.snake_reset()
+
 
 screen.exitonclick()
