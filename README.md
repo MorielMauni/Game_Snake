@@ -27,4 +27,4 @@ Contributing:
 Feel free to contribute to this project by submitting a pull request.
 
 Contact:
-For any questions or suggestions, please contact me at morielmauni@gmail.com.
+For any questions or suggestions, please get in touch with me at morielmauni@gmail.com.
